@@ -16,7 +16,7 @@ over a range of bits. The accessors expand into plain shifts and masks.
 
 - Swift tools 6.2.
 - macOS 15 / iOS 17 (`platforms` in `Package.swift`).
-- `swift-syntax` 600.0.0 or newer (a dependency of the macro target).
+- `swift-syntax` 603.x or 604.x (a dependency of the macro target).
 
 ## Installation
 
