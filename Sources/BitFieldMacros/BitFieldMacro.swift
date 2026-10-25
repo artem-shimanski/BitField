@@ -52,7 +52,7 @@ fileprivate let visibilityModifiers: Set<String> = ["public", "private", "filepr
 /// Parses an integer literal the way the Swift lexer does, i.e. honouring
 /// `0x` / `0o` / `0b` prefixes and `_` digit separators.
 private func integerValue(of literal: IntegerLiteralExprSyntax) -> Int? {
-    let text = literal.literal.text.replacingOccurrences(of: "_", with: "")
+    let text = literal.literal.text.filter { $0 != "_" }
     switch text.prefix(2).lowercased() {
     case "0x": return Int(text.dropFirst(2), radix: 16)
     case "0o": return Int(text.dropFirst(2), radix: 8)
